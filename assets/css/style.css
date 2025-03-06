@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Sans JP',"Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
