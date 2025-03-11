@@ -228,3 +228,80 @@ button {
   margin: 20px;
   text-align: center;
 }
+
+/* ---works--- */
+.works {
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.works > img {
+  margin: 0 15px;
+}
+
+/* ---footer--- */
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+.footer-map {
+  margin: 0;
+  padding: 40px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-map > iframe {
+  width: 60%;
+}
+.footer-map-info {
+  width: 40%;
+  padding: 15px;
+}
+.footer-map-logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.footer-map-address {
+  font-style: normal;
+}
+.footer-map-address > a {
+  color: #fff;
+}
+.footer-line {
+  border-color: #444;
+}
+.footer-copyright {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ---hero--- */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.hero > strong {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.hero > video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+.hero-particles {
+}
