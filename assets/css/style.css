@@ -321,6 +321,9 @@ button {
   display: flex;
   justify-content: left;
 }
+.radio > input {
+  margin-right: 5px;
+}
 @media screen and (max-width: 768px) {
   .form-table,
   .form-table tbody,
@@ -330,6 +333,12 @@ button {
     display: block;
     margin: 15px;
     text-align: left;
+  }
+}
+@media screen and (max-width: 468px) {
+  .radio {
+    display: block;
+    margin: 15px;
   }
 }
 
@@ -443,6 +452,12 @@ button {
 }
 .header-nav-item > a:hover {
   border-bottom: 2px solid #333;
+}
+
+@media screen and (max-width: 468px) {
+  .header-nav-item > a {
+    font-size: 12px;
+  }
 }
 
 /* ---hero--- */
