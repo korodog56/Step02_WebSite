@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 body {
+  caret-color: transparent;
   font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Sans",
     "Noto Sans", "Meiryo", "sans-serif";
   font-size: 14px;
@@ -21,6 +22,7 @@ button {
 /* ---section--- */
 .section-headline {
   padding: 30px 15px;
+  font-size: 60px;
 }
 .section {
   text-align: center;
@@ -35,26 +37,83 @@ button {
   margin-top: 40px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 20px 10px;
+  }
+  .section-headline {
+    font-size: 50px;
+    margin: 0 0 20px;
+  }
+}
+
+/* ---fortune--- */
+.fortune {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.fortune-headline {
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.fortune-image {
+  width: 70%;
+  height: auto;
+  padding: 40px;
+}
+.fortune-bone {
+  width: 70%;
+  height: auto;
+  padding: 40px;
+}
 
 /* ---about--- */
 .about {
+  width: 100%;
   margin: 0;
   display: flex;
+  justify-content: center;
 }
 .about-image {
-  width: 600px;
-  height: 400px;
+  margin-left: 20px;
+  width: 45%;
+  height: auto;
 }
 .about-caption {
-  padding-left: 15px;
+  margin-left: 20px;
+  width: 45%;
 }
 .about-headline {
   margin: 0 0 20px;
   font-size: 30px;
+  text-align: left;
+  font-weight: bold;
+  color: #000;
 }
 .about-description {
-  font-size: 14px;
+  font-size: 18px;
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    display: block;
+  }
+  .about-image {
+    max-width: 100%;
+    min-width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .about-headline {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about-caption {
+    margin: 0 20px;
+    width: 100%;
+  }
 }
 
 /* ---grid--- */
@@ -77,6 +136,17 @@ button {
 .grid-col-4 > .grid-item {
   width: 25%;
 }
+@media screen and (max-width: 768px) {
+  .grid {
+    display: block;
+  }
+  .grid-col-2 > .grid-item,
+  .grid-col-3 > .grid-item,
+  .grid-col-4 > .grid-item {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
 
 /* ---feature--- */
 .feature {
@@ -84,6 +154,7 @@ button {
   padding: 0 15px;
 }
 .feature-headline {
+  font-size: 30px;
   font-weight: bold;
   margin: 0 0 20px;
 }
@@ -91,8 +162,13 @@ button {
   margin: 0 0 20px;
 }
 .feature-description {
-  margin: 0;
+  font-size: 18px;
+  margin: 0 0 30px;
   text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 /* ---card--- */
@@ -128,19 +204,19 @@ button {
 }
 .card-time {
   display: flex;
-  font-size: 12px;
+  font-size: 18px;
   text-align: left;
 }
 .card-headline {
   display: flex;
   text-align: left;
   margin: 0;
-  font-size: 18px;
+  font-size: 36px;
 }
 .card-description {
   display: flex;
   text-align: left;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 /* ---avator--- */
@@ -186,6 +262,8 @@ button {
 }
 .button.button-submission {
   background: #92d3ca;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 /* ---select, input, radio, textarea--- */
@@ -212,8 +290,19 @@ button {
   min-height: 100px;
 }
 
+@media screen and (max-width: 768px) {
+  .select,
+  .input,
+  .textarea {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
 /* ---form--- */
-/* .form {} */
+.form {
+  font-size: 20px;
+}
 .form-table {
   margin: 0 auto;
 }
@@ -228,6 +317,21 @@ button {
   margin: 20px;
   text-align: center;
 }
+.radio-container {
+  display: flex;
+  justify-content: left;
+}
+@media screen and (max-width: 768px) {
+  .form-table,
+  .form-table tbody,
+  .form-table tr,
+  .form-table th,
+  .form-table td {
+    display: block;
+    margin: 15px;
+    text-align: left;
+  }
+}
 
 /* ---works--- */
 .works {
@@ -238,6 +342,16 @@ button {
 
 .works > img {
   margin: 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .works {
+    margin: 20px 0;
+    padding: 10px;
+  }
+  .works > img {
+    width: 100px;
+    margin: 5px;
+  }
 }
 
 /* ---footer--- */
@@ -257,7 +371,6 @@ button {
 }
 .footer-map-info {
   width: 40%;
-  padding: 15px;
 }
 .footer-map-logo {
   font-size: 25px;
@@ -265,8 +378,10 @@ button {
 }
 .footer-map-address {
   font-style: normal;
+  padding-left: 15px;
 }
 .footer-map-address > a {
+  display: block;
   color: #fff;
 }
 .footer-line {
@@ -277,10 +392,62 @@ button {
   text-align: center;
   padding: 10px;
 }
+@media screen and (max-width: 768px) {
+  .footer-map {
+    padding: 15px;
+    display: block;
+  }
+  .footer-map > iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .footer-map-info {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---header--- */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.header-logo {
+  margin: 0;
+}
+.header-logo > a {
+  display: block;
+}
+/* .header-nav {} */
+.header-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .header-nav-item {} */
+.header-nav-item > a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s;
+}
+.header-nav-item > a:hover {
+  border-bottom: 2px solid #333;
+}
 
 /* ---hero--- */
 .hero {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -288,24 +455,45 @@ button {
 .hero > strong {
   position: absolute;
   z-index: 3;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 75%;
   transform: translate(-50%, -50%);
   font-size: 120px;
-  color: #fff;
+  color: #ccc;
   display: block;
   width: 100%;
   text-align: center;
 }
 .hero > video {
   position: absolute;
+  left: 0;
   z-index: 1;
-  width: 100%;
-  height: auto;
+  min-width: 100%;
+  min-height: 100%;
 }
 .hero-particles {
   position: absolute;
   z-index: 2;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    width: 100vw;
+    height: 100vh;
+  }
+  .hero > strong {
+    font-size: 50px;
+    top: 80%;
+    left: 70%;
+  }
+  .hero > video {
+    position: absolute;
+    left: -60%;
+    top: 0;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+  }
 }
